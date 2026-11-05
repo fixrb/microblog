@@ -2,8 +2,8 @@
 
 require "fix"
 
-# A user, built from a handle, when "bob" is taken already: the handle is
-# normalized, must be valid, and must be free.
+# A user, built from a handle, when "bob" is taken already: the handle
+# is normalized, must be valid, and must be free.
 Fix :User do
   let(:handle) { "alice" }
 

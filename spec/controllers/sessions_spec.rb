@@ -2,8 +2,8 @@
 
 require "fix"
 
-# The response to signing in with the handle: home when it is valid, the form
-# again when it is not.
+# The response to signing in with the handle: home when it is valid, the
+# form again when it is not.
 Fix :SignIn do
   let(:handle) { "alice" }
 

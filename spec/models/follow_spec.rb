@@ -2,8 +2,8 @@
 
 require "fix"
 
-# A follow from Alice, who follows Carol already, to the user of the handle:
-# not herself, and not Carol twice.
+# A follow from Alice, who follows Carol already, to the user of the
+# handle: not herself, and not Carol twice.
 Fix :Follow do
   let(:handle) { "bob" }
 

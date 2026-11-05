@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 module Microblog
-  # The text of a post. A body is empty when it has nothing but spaces, too
-  # long beyond MAXIMUM characters, and mentions the users whose handle
-  # follows an at sign, as "@alice" does, once each and in order of
-  # appearance. The at sign of an address, as in "me@example.com", mentions
-  # nobody.
+  # The text of a post. A body is empty when it has nothing but spaces,
+  # too long beyond MAXIMUM characters, and mentions the users whose
+  # handle follows an at sign, as "@alice" does, once each and in order
+  # of appearance. The at sign of an address, as in "me@example.com",
+  # mentions nobody.
   #
   #   body = Microblog::Body.new("Hello, @Alice and @bob! cc @bob")
   #   body.valid?   # => true
@@ -14,8 +14,9 @@ module Microblog
     # The number of characters a body may have.
     MAXIMUM = 280
 
-    # An at sign, then a handle, with neither a letter nor a digit of any
-    # script against them: "me@example.com" and "@alicé" mention nobody.
+    # An at sign, then a handle, with neither a letter nor a digit of
+    # any script against them: "me@example.com" and "@alicé" mention
+    # nobody.
     MENTION = /(?<![[:alnum:]_])@(\w+)(?![[:alnum:]])/
 
     # @param text [#to_s] the text of the post, or nil
@@ -35,7 +36,7 @@ module Microblog
       @text.strip.empty?
     end
 
-    # @return [Boolean] whether the text has more than MAXIMUM characters
+    # @return [Boolean] whether the text exceeds MAXIMUM characters
     def too_long?
       @text.length > MAXIMUM
     end
@@ -45,7 +46,7 @@ module Microblog
       !empty? && !too_long?
     end
 
-    # @return [Array<String>] the valid handles mentioned, once each, in order
+    # @return [Array<String>] the valid handles mentioned, once each
     def mentions
       handles = @text.scan(MENTION).flatten.map { |name| Handle.new(name) }
 

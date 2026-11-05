@@ -2,8 +2,8 @@
 
 require "fix"
 
-# A post, built from a body: it mentions the handles of the body, and says why
-# an empty or an overlong body is refused.
+# A post, built from a body: it mentions the handles of the body, and
+# says why an empty or an overlong body is refused.
 Fix :Post do
   let(:body) { "Good morning, @bob and @carol." }
 

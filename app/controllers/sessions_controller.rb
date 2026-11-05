@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-# Signing in is picking a handle: a new one is created on the spot. There are
-# no passwords in this example; a real application would put them here.
+# Signing in is picking a handle: a new one is created on the spot.
+# There are no passwords in this example; a real application would put
+# them here.
 class SessionsController < ApplicationController
   def new
     @user = User.new

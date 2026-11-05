@@ -2,9 +2,9 @@
 
 require "fix"
 
-# The body of a post, built from a text: empty when it has nothing but spaces,
-# too long beyond 280 characters, mentioning the handles after an at sign once
-# each and in order, and nobody in an address.
+# The body of a post, built from a text: empty when it has nothing but
+# spaces, too long beyond 280 characters, mentioning the handles after
+# an at sign once each and in order, and nobody in an address.
 Fix :Body do
   let(:text) { "Hello, @Alice and @bob! cc @bob" }
 

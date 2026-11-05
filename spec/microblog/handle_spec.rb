@@ -2,8 +2,8 @@
 
 require "fix"
 
-# A handle, built from a text: one to fifteen lowercase letters, digits or
-# underscores once spaces and case are forgiven.
+# A handle, built from a text: one to fifteen lowercase letters, digits
+# or underscores once spaces and case are forgiven.
 Fix :Handle do
   let(:text) { "alice" }
 

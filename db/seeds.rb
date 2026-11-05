@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# Three users, a few posts and a follow, for a first look at the application:
+# Three users, a few posts and a follow, for a first look at the
+# application:
 #
 #   bin/rails db:seed
 #

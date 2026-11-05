@@ -2,9 +2,9 @@
 
 require "fix"
 
-# The response to posting the body, for the visitor signed in with the handle:
-# home when the post is saved, the form again with the reason when it is not,
-# the sign-in page for a visitor who is not signed in.
+# The response to posting the body, for the visitor signed in with the
+# handle: home when the post is saved, the form again with the reason
+# when it is not, the sign-in page for a visitor who is not signed in.
 Fix :CreatePost do
   let(:handle) { "alice" }
   let(:body) { "Hello, world!" }

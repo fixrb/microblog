@@ -2,8 +2,8 @@
 
 module Microblog
   # A handle names a user: one to fifteen lowercase letters, digits or
-  # underscores. Surrounding spaces and uppercase letters are forgiven on the
-  # way in, so that " Alice " names the same user as "alice".
+  # underscores. Surrounding spaces and uppercase letters are forgiven
+  # on the way in, so that " Alice " names the same user as "alice".
   #
   #   handle = Microblog::Handle.new(" Alice ")
   #   handle.to_s   # => "alice"

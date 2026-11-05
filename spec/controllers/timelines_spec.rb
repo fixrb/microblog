@@ -2,9 +2,10 @@
 
 require "fix"
 
-# The response to the home page for the visitor signed in with the handle,
-# when Alice follows Bob but not Carol and the three of them posted: Alice
-# reads her posts and Bob's; a visitor who is not signed in is sent to sign in.
+# The response to the home page for the visitor signed in with the
+# handle, when Alice follows Bob but not Carol and the three of them
+# posted: Alice reads her posts and Bob's; a visitor who is not signed
+# in is sent to sign in.
 Fix :Home do
   let(:handle) { "alice" }
 

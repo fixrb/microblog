@@ -2,9 +2,9 @@
 
 require "fix"
 
-# The response to the profile of the handle, for Alice, who follows Bob: his
-# posts and a button to unfollow him, a button to follow Carol, no button on
-# her own profile, not found for nobody.
+# The response to the profile of the handle, for Alice, who follows Bob:
+# his posts and a button to unfollow him, a button to follow Carol, no
+# button on her own profile, not found for nobody.
 Fix :Profile do
   let(:handle) { "bob" }
 

@@ -2,8 +2,9 @@
 
 require "fix"
 
-# The bodies of Alice's timeline, when she follows Bob but not Carol and the
-# three of them posted, Bob first and Carol last: hers and Bob's, newest first.
+# The bodies of Alice's timeline, when she follows Bob but not Carol and
+# the three of them posted, Bob first and Carol last: hers and Bob's,
+# newest first.
 Fix :Timeline do
   it MUST eq ["From Alice", "From Bob"]
 

@@ -2,8 +2,8 @@
 
 require "fix"
 
-# The response to Alice following the user of the handle: that user's profile,
-# or not found.
+# The response to Alice following the user of the handle: that user's
+# profile, or not found.
 Fix :FollowUser do
   let(:handle) { "bob" }
 
