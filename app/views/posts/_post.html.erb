@@ -1,0 +1,15 @@
+<article>
+  <p>
+    <%= link_to "@#{post.user.handle}", post.user %>
+    <time datetime="<%= post.created_at.iso8601 %>"><%= time_ago_in_words(post.created_at) %> ago</time>
+  </p>
+  <p><%= post.body %></p>
+  <% if post.mentions.any? %>
+    <p class="count">
+      Mentions:
+      <% post.mentions.each do |handle| %>
+        <%= link_to "@#{handle}", user_path(handle) %>
+      <% end %>
+    </p>
+  <% end %>
+</article>

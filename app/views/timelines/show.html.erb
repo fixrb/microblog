@@ -1,0 +1,17 @@
+<h2>Home</h2>
+
+<%= form_with model: @post do |form| %>
+  <%= form.text_area :body, rows: 3, placeholder: "What is happening?", autofocus: true %>
+
+  <% @post.errors.full_messages.each do |message| %>
+    <p class="error"><%= message %></p>
+  <% end %>
+
+  <%= form.submit "Post" %>
+<% end %>
+
+<% if @posts.empty? %>
+  <p>Nothing here yet. Post something, or follow someone.</p>
+<% else %>
+  <%= render @posts %>
+<% end %>

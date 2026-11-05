@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    attributes:
+      follow:
+        followed: "This user"
+        followed_id: "This user"
+    errors:
+      models:
+        follow:
+          attributes:
+            followed:
+              oneself: "is you"
+            followed_id:
+              taken: "is already followed"

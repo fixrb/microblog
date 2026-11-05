@@ -1,0 +1,17 @@
+<h2>Sign in</h2>
+
+<p>
+  Pick a handle: one to fifteen lowercase letters, digits or underscores.
+  A new handle is created on the spot; there are no passwords in this example.
+</p>
+
+<%= form_with url: session_path do |form| %>
+  <%= form.label :handle %>
+  <%= form.text_field :handle, value: @user.handle, required: true, autofocus: true, autocomplete: "username" %>
+
+  <% @user.errors.full_messages.each do |message| %>
+    <p class="error"><%= message %></p>
+  <% end %>
+
+  <%= form.submit "Sign in" %>
+<% end %>
