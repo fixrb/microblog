@@ -66,7 +66,7 @@ Neither file loads Rails or a database: the test runs in a tenth of a second. Th
 
 `app/models` holds three Active Record models. `User` and `Post` delegate to the domain what belongs to it: a handle is normalized by `Microblog::Handle` and a body judged by `Microblog::Body`. What is relational stays in the models, next to the database that enforces it: a handle is unique, a user follows another once and never themselves, and a timeline is a query.
 
-Their tests load the application in its test environment through `fix/support/rails.rb`. Fix builds the subject anew for every expectation, in a child process; Active Record forgets the connections of the parent after a fork, so each child gets a connection of its own. The database is outside the processes, though, so a subject begins by emptying it. Nothing is wrapped in a transaction, and nothing is rolled back.
+Their tests load the application in its test environment through `fix/support/rails.rb`. Fix builds the subject anew for every expectation, in the child process of its context, which the other expectations of that context share; Active Record forgets the connections of the parent after a fork, so each child gets a connection of its own. The database is outside the processes, though, so a subject begins by emptying it. Nothing is wrapped in a transaction, and nothing is rolled back.
 
 ```ruby
 # spec/models/follow_spec.rb, abridged

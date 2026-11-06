@@ -16,11 +16,11 @@ require "rack/test"
 # does.
 ActiveRecord::Migration.maintain_test_schema!
 
-# Fix builds the subject anew for every expectation, in a child process
-# of its own, which gets a connection of its own: Active Record forgets
-# the pool of the parent after a fork. The database itself is outside
-# the processes, so a subject starts by emptying it. Nothing is rolled
-# back; nothing needs to be.
+# Fix builds the subject anew for every expectation, in the child
+# process of its context, which gets a connection of its own: Active
+# Record forgets the pool of the parent after a fork. The database
+# itself is outside the processes, so a subject starts by emptying it.
+# Nothing is rolled back; nothing needs to be.
 def empty_database
   Follow.delete_all
   Post.delete_all
